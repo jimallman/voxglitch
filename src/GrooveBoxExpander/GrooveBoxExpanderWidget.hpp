@@ -26,7 +26,7 @@ struct GrooveBoxExpanderWidget : VoxglitchModuleWidget
 
   float mute_buttons_row = 40.74;
   float solo_buttons_row = 118.11024 ;
-  float gate_outputs_row = 345.898;
+  float gate_outputs_row = 359.5;
   float volume_knobs_row = 178.79;
   float pan_knobs_row = 233.69;
   float pitch_knobs_row = 288.57;
@@ -65,8 +65,8 @@ struct GrooveBoxExpanderWidget : VoxglitchModuleWidget
       //
       // Add track trigger outputs
       //
+      addChild(createLightCentered<SmallLight<RedLight>>(Vec(x, gate_outputs_row - 26.0), module, GrooveBoxExpander::GATE_OUTPUT_LIGHTS + i));
       addOutput(createOutputCentered<ModdedCL1362>(Vec(x, gate_outputs_row), module, GrooveBoxExpander::TRIGGER_OUTPUTS + i));
-      addChild(createLightCentered<SmallLight<RedLight>>(Vec(x, gate_outputs_row + 20), module, GrooveBoxExpander::GATE_OUTPUT_LIGHTS + i));
 
     }
   }
